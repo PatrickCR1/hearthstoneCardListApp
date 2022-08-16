@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_all_cards">
+
+    <fragment
+        android:id="@+id/nav_all_cards"
+        android:name="com.example.hearthstonelist.view.fragments.AllCardsFragment"
+        android:label="@string/menu_all_cards"
+        tools:layout="@layout/fragment_all_cards" />
+
+    <fragment
+        android:id="@+id/nav_demon_hunter"
+        android:name="com.example.hearthstonelist.view.fragments.DemonHunterFragment"
+        android:label="@string/menu_demon_hunter"
+        tools:layout="@layout/fragment_demon_hunter" />
+
+    <fragment
+        android:id="@+id/nav_druid"
+        android:name="com.example.hearthstonelist.view.fragments.DruidFragment"
+        android:label="@string/menu_druid"
+        tools:layout="@layout/fragment_druid" />
+
+    <fragment
+        android:id="@+id/nav_hunter"
+        android:name="com.example.hearthstonelist.view.fragments.HunterFragment"
+        android:label="@string/menu_hunter"
+        tools:layout="@layout/fragment_hunter" />
+
+    <fragment
+        android:id="@+id/nav_mage"
+        android:name="com.example.hearthstonelist.view.fragments.MageFragment"
+        android:label="@string/menu_mage"
+        tools:layout="@layout/fragment_mage" />
+
+    <fragment
+        android:id="@+id/nav_paladin"
+        android:name="com.example.hearthstonelist.view.fragments.PaladinFragment"
+        android:label="@string/menu_paladin"
+        tools:layout="@layout/fragment_paladin" />
+
+    <fragment
+        android:id="@+id/nav_priest"
+        android:name="com.example.hearthstonelist.view.fragments.PriestFragment"
+        android:label="@string/menu_priest"
+        tools:layout="@layout/fragment_priest" />
+
+    <fragment
+        android:id="@+id/nav_rogue"
+        android:name="com.example.hearthstonelist.view.fragments.RogueFragment"
+        android:label="@string/menu_rogue"
+        tools:layout="@layout/fragment_rogue" />
+
+    <fragment
+        android:id="@+id/nav_shaman"
+        android:name="com.example.hearthstonelist.view.fragments.ShamanFragment"
+        android:label="@string/menu_shaman"
+        tools:layout="@layout/fragment_shaman" />
+
+    <fragment
+        android:id="@+id/nav_warlock"
+        android:name="com.example.hearthstonelist.view.fragments.WarlockFragment"
+        android:label="@string/menu_warlock"
+        tools:layout="@layout/fragment_warlock" />
+
+    <fragment
+        android:id="@+id/nav_warrior"
+        android:name="com.example.hearthstonelist.view.fragments.WarriorFragment"
+        android:label="@string/menu_warrior"
+        tools:layout="@layout/fragment_warrior" />
+
+</navigation>

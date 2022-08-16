@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/activity_complete_card.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/app_bar_main.xml" value="0.15" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/content_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_all_cards.xml" value="0.275" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_demon_hunter.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_druid.xml" value="0.3609375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_gallery.xml" value="0.15" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_home.xml" value="0.15" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_hunter.xml" value="0.375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_mage.xml" value="0.3609375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_paladin.xml" value="0.3609375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_priest.xml" value="0.3609375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_rogue.xml" value="0.375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_shaman.xml" value="0.3609375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_warlock.xml" value="0.3609375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/fragment_warrior.xml" value="0.3609375" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/nav_header_main.xml" value="0.15" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/layout/row_card_list.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/menu/activity_main_drawer.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Adm/AndroidStudioProjects/HearthstoneList/app/src/main/res/menu/main.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
