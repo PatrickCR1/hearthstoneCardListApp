@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hearthstonelist.databinding.RowCardListBinding
 import com.example.hearthstonelist.service.listener.CardListener
-import com.example.hearthstonelist.service.model.CardModel
+import com.example.hearthstonelist.service.model.domainmodel.CardModel
 import com.example.hearthstonelist.view.viewholder.CardsViewHolder
 
 

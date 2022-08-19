@@ -7,8 +7,10 @@ import android.os.Build
 import com.example.hearthstonelist.R
 import com.example.hearthstonelist.service.constants.HSConstants
 import com.example.hearthstonelist.service.listener.APIListener
-import com.example.hearthstonelist.service.model.CardListModel
-import com.example.hearthstonelist.service.model.CardModel
+import com.example.hearthstonelist.service.model.apimodel.CardListModel
+import com.example.hearthstonelist.service.model.apimodel.CardModelApi
+import com.example.hearthstonelist.service.model.domainmodel.CardModel
+import com.example.hearthstonelist.service.toCardModel
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,7 +28,6 @@ class CardRepository(val context: Context) {
         }
 
         executeCallAll(remote.listAll(), listener)
-
     }
 
     fun listClass(hsClass: String, listener: APIListener<List<CardModel?>>) {
@@ -44,119 +45,122 @@ class CardRepository(val context: Context) {
 
             override fun onResponse(call: Call<CardListModel>, response: Response<CardListModel>) {
                 if (response.code() == HSConstants.HTTP.SUCCESS) {
-                    var allCardList = arrayListOf<CardModel?>()
+                    var apiList = arrayListOf<CardModelApi?>()
 
                     for (card in (response.body())?.listBasic!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listClassic!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listHallOfFame!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listNaxxramas!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listGoblinGnomes!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listBlackrockMountain!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listTheGrandTournament!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listHeroSkins!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listLeagueOfExplorers!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listWhispersOfTheOldGods!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listOneNightInKarazhan!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listMeanStreetsofGadgetzan!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listJourneytoUnGoro!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listKnightsOfTheFrozenThrone!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listKoboldsCatacombs!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listTheWitchwood!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listTheBoomsdayProject!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listRastakhansRumble!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listRiseOfShadows!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listSaviorsOfUldum!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listDescentOfDragons!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listGalakrondsAwakening!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listAshesOfOutland!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listScholomanceAcademy!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listDemonHunterInitiate!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listMadnessAtTheDarkmoonFaire!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listForgedInTheBarrens!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listLegacy!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listCore!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listVanilla!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listUnitedInStormwind!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listFracturedInAlteracValley!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listVoyageToTheSunkenCity!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listUnknown!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
                     for (card in (response.body())?.listMurderAtCastleNathria!!) {
-                        allCardList.add(card)
+                        apiList.add(card)
                     }
+
+                    val allCardList: List<CardModel?> = apiList.map { it?.toCardModel() }
 
                     listener.onSuccess(allCardList)
                 } else {
                     listener.onFailure(failResponse(response.errorBody()!!.string()))
                 }
             }
+
             override fun onFailure(call: Call<CardListModel?>, t: Throwable) {
                 listener.onFailure(context.getString(R.string.ERROR_UNEXPECTED))
             }
@@ -164,18 +168,20 @@ class CardRepository(val context: Context) {
 
     }
 
-    fun executeCallClass(call: Call<List<CardModel>>, listener: APIListener<List<CardModel?>>) {
-        call.enqueue(object : Callback<List<CardModel>> {
+    fun executeCallClass(call: Call<List<CardModelApi>>, listener: APIListener<List<CardModel?>>) {
+        call.enqueue(object : Callback<List<CardModelApi>> {
 
-            override fun onResponse(call: Call<List<CardModel>>, response: Response<List<CardModel>>) {
+            override fun onResponse(call: Call<List<CardModelApi>>,response: Response<List<CardModelApi>>) {
                 if (response.code() == HSConstants.HTTP.SUCCESS) {
-
-                    response.body()?.let { listener.onSuccess(it) }
+                    var apiList = response.body()
+                    val classList: List<CardModel?> = apiList!!.map { it.toCardModel() }
+                    response.body()?.let { listener.onSuccess(classList) }
                 } else {
                     listener.onFailure(failResponse(response.errorBody()!!.string()))
                 }
             }
-            override fun onFailure(call: Call<List<CardModel>>, t: Throwable) {
+
+            override fun onFailure(call: Call<List<CardModelApi>>, t: Throwable) {
                 listener.onFailure(context.getString(R.string.ERROR_UNEXPECTED))
             }
         })

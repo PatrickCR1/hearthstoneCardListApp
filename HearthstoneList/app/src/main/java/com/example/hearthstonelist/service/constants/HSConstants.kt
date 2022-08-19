@@ -14,6 +14,7 @@ class HSConstants private constructor() {
     }
 
     object BUNDLE {
+        const val CARD = "card"
         const val IMAGE = "image"
         const val NAME = "name"
         const val FLAVOR = "flavor"

@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.example.hearthstonelist.R
 import com.example.hearthstonelist.databinding.ActivityCompleteCardBinding
-import com.example.hearthstonelist.databinding.ActivityCompleteCardBinding.inflate
 import com.example.hearthstonelist.service.constants.HSConstants
+import com.example.hearthstonelist.service.image.ImageService
+import com.example.hearthstonelist.service.model.domainmodel.CardModel
 import com.example.hearthstonelist.viewmodel.CompleteCardViewModel
-import com.squareup.picasso.Picasso
 
 class CompleteCardActivity : AppCompatActivity() {
 
@@ -31,37 +31,21 @@ class CompleteCardActivity : AppCompatActivity() {
     private fun loadDataFromMain() {
         val bundle = intent.extras
         if (bundle != null) {
-            binding.textCardName.text = bundle.getString(HSConstants.BUNDLE.NAME)
-            binding.textCardFlavor.text = bundle.getString(HSConstants.BUNDLE.FLAVOR)
-            binding.textCardText.text = bundle.getString(HSConstants.BUNDLE.DESCRIPTION)
-            binding.textCardRarity.text =
-                getString(R.string.card_rarity) + " " + bundle.getString(HSConstants.BUNDLE.RARITY)
-            binding.textCardSet.text =
-                getString(R.string.card_set) + " " + bundle.getString(HSConstants.BUNDLE.CARD_SET)
-            binding.textCardType.text =
-                getString(R.string.card_type) + " " + bundle.getString(HSConstants.BUNDLE.TYPE)
-            binding.textCardFaction.text =
-                getString(R.string.card_faction) + " " + bundle.getString(HSConstants.BUNDLE.FACTION)
-            binding.textCardCost.text =
-                getString(R.string.card_cost) + " " + bundle.getInt(HSConstants.BUNDLE.COST)
-                    .toString()
-            binding.textCardAttack.text =
-                getString(R.string.card_attack) + " " + bundle.getInt(HSConstants.BUNDLE.ATTACK)
-                    .toString()
-            binding.textCardHealth.text =
-                getString(R.string.card_health) + " " + bundle.getInt(HSConstants.BUNDLE.HEALTH)
-                    .toString()
-            val image = bundle.getString(HSConstants.BUNDLE.IMAGE)
+            val card = bundle.getParcelable<CardModel>(HSConstants.BUNDLE.CARD)
+            binding.textCardName.text = card?.cardName
+            binding.textCardFlavor.text = card?.flavor
+            binding.textCardText.text = card?.description
+            binding.textCardRarity.text = getString(R.string.card_rarity) + " " + card?.rarity
+            binding.textCardSet.text = getString(R.string.card_set) + " " + card?.cardSet
+            binding.textCardType.text = getString(R.string.card_type) + " " + card?.type
+            binding.textCardFaction.text = getString(R.string.card_faction) + " " + card?.faction
+            binding.textCardCost.text = getString(R.string.card_cost) + " " + card?.cost.toString()
+            binding.textCardAttack.text = getString(R.string.card_attack) + " " + card?.attack.toString()
+            binding.textCardHealth.text = getString(R.string.card_health) + " " + card?.health.toString()
+            val image = card!!.image
 
-            if (image != "") {
-                Picasso.with(this)
-                    .load(image)
-                    .into(binding.imageCard)
-            }
+            ImageService.loadImage(this, image, binding.imageCard)
 
         }
-
     }
-
-
 }
