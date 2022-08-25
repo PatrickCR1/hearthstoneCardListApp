@@ -18,6 +18,7 @@
     <string name="menu_shaman">Shaman</string>
     <string name="menu_warlock">Warlock</string>
     <string name="menu_warrior">Warrior</string>
+    <string name="menu_complete_card">Complete Card</string>
 
 
     <string name="ERROR_UNEXPECTED">Um erro inesperado ocorreu. Tente novamente mais tarde.</string>

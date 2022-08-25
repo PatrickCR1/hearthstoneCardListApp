@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ui.view.fragments.CompleteCardFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/image_card"
+            style="@style/CardItems"
+            android:layout_marginTop="@dimen/large_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_card_name"
+            style="@style/CardItems"
+            android:text="@string/card_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_card" />
+
+        <TextView
+            android:id="@+id/text_card_text"
+            style="@style/CardItems"
+            android:text="@string/card_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_name" />
+
+        <TextView
+            android:id="@+id/text_card_flavor"
+            style="@style/CardItems"
+            android:text="@string/card_flavor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_text" />
+
+        <TextView
+            android:id="@+id/text_card_rarity"
+            style="@style/CardItems"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:text="@string/card_rarity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_flavor" />
+
+        <TextView
+            android:id="@+id/text_card_set"
+            style="@style/CardItems"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/card_set"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_flavor" />
+
+        <TextView
+            android:id="@+id/text_card_type"
+            style="@style/CardItems"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:text="@string/card_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_rarity" />
+
+        <TextView
+            android:id="@+id/text_card_faction"
+            style="@style/CardItems"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/card_faction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_rarity" />
+
+        <TextView
+            android:id="@+id/text_card_cost"
+            style="@style/CardItems"
+            android:text="@string/card_cost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_type" />
+
+        <TextView
+            android:id="@+id/text_card_attack"
+            style="@style/CardItems"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:text="@string/card_attack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_cost" />
+
+        <TextView
+            android:id="@+id/text_card_health"
+            style="@style/CardItems"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/card_health"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_card_cost" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

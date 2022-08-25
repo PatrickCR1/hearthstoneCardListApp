@@ -13,21 +13,6 @@ class HSConstants private constructor() {
         const val SUCCESS = 200
     }
 
-    object BUNDLE {
-        const val CARD = "card"
-        const val IMAGE = "image"
-        const val NAME = "name"
-        const val FLAVOR = "flavor"
-        const val DESCRIPTION = "description"
-        const val CARD_SET = "cardset"
-        const val TYPE = "type"
-        const val FACTION = "faction"
-        const val RARITY = "rarity"
-        const val ATTACK = "attack"
-        const val HEALTH = "health"
-        const val COST = "cost"
-    }
-
     object CLASS {
         const val DEMON_HUNTER = "demon hunter"
         const val DRUID = "druid"

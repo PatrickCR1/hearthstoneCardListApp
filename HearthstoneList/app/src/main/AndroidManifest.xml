@@ -17,10 +17,7 @@
         android:theme="@style/Theme.HearthstoneList"
         tools:targetApi="31">
         <activity
-            android:name=".view.CompleteCardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.MainActivity"
+            android:name="com.example.hearthstonelist.ui.ui.view.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.HearthstoneList.NoActionBar">
