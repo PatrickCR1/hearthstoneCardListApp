@@ -1,18 +1,14 @@
-package com.example.hearthstonelist.ui.ui.viewmodel
+package com.example.hearthstonelist.ui.viewmodel
 
-import android.app.Application
-import android.os.Bundle
-import androidx.lifecycle.AndroidViewModel
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.hearthstonelist.service.constants.HSConstants
+import androidx.lifecycle.ViewModel
 import com.example.hearthstonelist.service.listener.APIListener
 import com.example.hearthstonelist.service.model.domainmodel.CardModel
 import com.example.hearthstonelist.service.repository.CardRepository
 
-class CardListViewModel(application: Application) : AndroidViewModel(application) {
-
-    private val cardRepository = CardRepository(application.applicationContext)
+class CardListViewModel(private val repository: CardRepository) : ViewModel() {
 
     // Live Data
     private val _cards = MutableLiveData<List<CardModel?>>()
@@ -32,11 +28,11 @@ class CardListViewModel(application: Application) : AndroidViewModel(application
 
     // Get Lists
     fun list() {
-        cardRepository.listAll(listener)
+        repository.listAll(listener)
     }
 
     fun listClass(hsClass: String) {
-        cardRepository.listClass(hsClass, listener)
+        repository.listClass(hsClass, listener)
 
     }
     fun navigate(card: CardModel) {

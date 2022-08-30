@@ -25,19 +25,20 @@
     <string name="ERROR_INTERNET_CONNECTION">Conexão à internet necessária para uso da applicação.</string>
 
     <string name="card_name">Nome do card</string>
+    <string name="card_name_label">Nome do card</string>
     <string name="card_image">Imagem do card</string>
-    <string name="card_set">Set: </string>
+    <string name="card_set">Set: %s</string>
     <string name="card_flavor">Flavor do card</string>
     <string name="card_text">Descrição do card</string>
-    <string name="card_type">Tipo: </string>
-    <string name="card_faction">Facção: </string>
-    <string name="card_rarity">Raridade: </string>
-    <string name="card_cost">Custo: </string>
-    <string name="card_attack">Ataque: </string>
-    <string name="card_health">Vida: </string>
+    <string name="card_type">Tipo: %s</string>
+    <string name="card_faction">Facção: %s</string>
+    <string name="card_rarity">Raridade: %s</string>
+    <string name="card_rarity_label">Raridade: </string>
+    <string name="card_cost">Custo: %d</string>
+    <string name="card_cost_label">Custo: </string>
+    <string name="card_attack">Ataque: %d</string>
+    <string name="card_health">Vida: %d</string>
 
     <string name="all_cards">Todas as cartas</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

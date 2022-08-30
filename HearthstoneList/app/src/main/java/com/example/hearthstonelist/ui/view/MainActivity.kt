@@ -1,4 +1,4 @@
-package com.example.hearthstonelist.ui.ui.view
+package com.example.hearthstonelist.ui.view
 
 import android.os.Bundle
 import com.google.android.material.navigation.NavigationView

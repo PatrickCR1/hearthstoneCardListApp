@@ -1,4 +1,4 @@
-package com.example.hearthstonelist.ui.ui.view.fragments
+package com.example.hearthstonelist.ui.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,33 +6,33 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hearthstonelist.MobileNavigationDirections
 import com.example.hearthstonelist.databinding.FragmentBaseBinding
 import com.example.hearthstonelist.service.listener.CardListener
 import com.example.hearthstonelist.service.model.domainmodel.CardModel
-import com.example.hearthstonelist.ui.ui.adapter.CardsAdapter
-import com.example.hearthstonelist.ui.ui.viewmodel.CardListViewModel
+import com.example.hearthstonelist.ui.adapter.CardsAdapter
+import com.example.hearthstonelist.ui.viewmodel.CardListViewModel
+import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-abstract class BaseFragment : Fragment() {
+abstract class BaseCardListFragment() : Fragment() {
 
     // ViewModel & Binding
-    private lateinit var viewModel: CardListViewModel
+    val viewModel: CardListViewModel by viewModel()
     private var _binding: FragmentBaseBinding? = null
     private val binding get() = _binding!!
 
     // Adapter
-    private val adapter = CardsAdapter()
+    private val adapter: CardsAdapter by inject()
 
     // Transition
     private var transition = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, b: Bundle?): View? {
 
-        // Binding && ViewModel
-        viewModel = ViewModelProvider(this).get(CardListViewModel::class.java)
+        // Binding
         _binding = FragmentBaseBinding.inflate(inflater, container, false)
 
         // Recycler & Adapter
@@ -47,7 +47,6 @@ abstract class BaseFragment : Fragment() {
         }
 
         adapter.attachListener(listener)
-        adapter.getContext(requireContext())
 
         // Observers
         observe()

@@ -16,9 +16,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class CardRepository(val context: Context) {
-
-    private val remote = RetrofitClient.getService(CardService::class.java)
+class CardRepository(private val webService: CardService, private val context: Context) {
 
     // Get Lists
     fun listAll(listener: APIListener<List<CardModel?>>) {
@@ -27,7 +25,7 @@ class CardRepository(val context: Context) {
             return
         }
 
-        executeCallAll(remote.listAll(), listener)
+        executeCallAll(webService.listAll(), listener)
     }
 
     fun listClass(hsClass: String, listener: APIListener<List<CardModel?>>) {
@@ -36,7 +34,7 @@ class CardRepository(val context: Context) {
             return
         }
 
-        executeCallClass(remote.listClass(hsClass), listener)
+        executeCallClass(webService.listClass(hsClass), listener)
     }
 
     // Calls

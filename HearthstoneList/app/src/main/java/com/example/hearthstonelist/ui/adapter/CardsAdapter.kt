@@ -1,4 +1,4 @@
-package com.example.hearthstonelist.ui.ui.adapter
+package com.example.hearthstonelist.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,14 +7,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hearthstonelist.databinding.RowCardListBinding
 import com.example.hearthstonelist.service.listener.CardListener
 import com.example.hearthstonelist.service.model.domainmodel.CardModel
-import com.example.hearthstonelist.ui.ui.viewholder.CardsViewHolder
+import com.example.hearthstonelist.ui.viewholder.CardsViewHolder
 
 
-class CardsAdapter : RecyclerView.Adapter<CardsViewHolder>() {
+class CardsAdapter (private val context: Context) : RecyclerView.Adapter<CardsViewHolder>() {
 
     private var listCards: List<CardModel?> = arrayListOf()
     private lateinit var listener: CardListener
-    private lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardsViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -41,10 +40,4 @@ class CardsAdapter : RecyclerView.Adapter<CardsViewHolder>() {
     fun attachListener(cardListener: CardListener) {
         listener = cardListener
     }
-
-    // Context
-    fun getContext(getContext: Context) {
-        context = getContext
-    }
-
 }

@@ -1,4 +1,4 @@
-package com.example.hearthstonelist.ui.ui.viewholder
+package com.example.hearthstonelist.ui.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hearthstonelist.databinding.RowCardListBinding
