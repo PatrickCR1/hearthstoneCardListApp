@@ -1,34 +1,21 @@
 # hearthstoneCardListApp
-Hearthstone App that lists all cards and all cards by class
+Repository of Hearthstone CardList Application
 
-Teste Técnico Petz - iOS/Android
-Obrigado pelo interesse e pela participação no processo para fazer parte do nosso time de apps.
+This application shows a list of hearthstone cards to the user, showing name, rarity and cost on the first screen. If you click on any card, it navigates to a second
+screen where the user have the imagem and all the informations on that card, incluinding name, flavor, description, rarity, set, type, faction, cost, attack and
+health. The application uses connection to an API to obtain the list of hearthstone cards.
 
-Queremos propor um pequeno teste para auxiliar-nos a entender sua forma de trabalhar e seu conhecimento técnico de maneira mais assertiva.
+The app have the MVVM architecture and uses Koin to do the dependency injection. The View is composed of a main activity that hosts all the fragments, using navigation
+with safe args to pass the data between the fragments. The first fragment of the application shows a list of cards with no filter, using a drawer layout to navigate to
+the other fragments, each named by a different class, to show the user a list of cards filtered by the chosen class. 
 
-O que precisa ser feito
-Utilizando a API do Hearthstone, crie uma aplicação com que liste os cards desta API e que, ao clicar em um item da lista, mostre uma tela com os detalhes daquele card, incluindo os seguintes dados:
+The complete list and the class fragments shows the list through a RecyclerView, using an Adapter and a ViewHolder. The class fragments inherits from a base fragment,
+to avoid boiler plate codes. The fragments have a load icon to show while the user waits the connection to the API to be completed.
 
-A imagem principal do cartão
-Nome
-Descrição "flavor"
-Descrição curta
-Set pertencente
-Tipo
-Facção
-Raridade
-Ataque
-Custo
-Health
-O que torna o seu teste mais rico em qualquer uma das duas plataformas
-Usar recursos pensando na escalabilidade do projeto
-Testes unitários
-Para o Android
-Uso de algum padrão arquitetural (MVVM, MVP, MVI, etc.)
-Utilização dos recursos do Jetpack
-Para o iOS
-Uso de algum padrão arquitetural diferente do MVC (MVVM, MVP, VIP, VIPER, etc.)
-A utilização de SwiftUI / UIKit é livre, mas caso utilize SwiftUI, tenha como target iOS 13 e demonstre a utilização de UIViewRepresentable.
-Como entregar o teste
-Subir o projeto em um repositório com permissão de leitura pública. (Github, Bitbucket, Gitlab...).
-Enviar a url do projeto.
+The ViewModel is responsible with the navigation, the click listeners and connecting to the repository to get the cards that are shown. The repository connects to
+the API. The API call uses Retrofit.
+
+The application has 2 models, one for the API, and one domain model, to be used during the application. The application has support for
+different device resolutions and orientation.
+
+The idea of the application comes from a job test, and uses the Hearthstone API: https://rapidapi.com/omgvamp/api/hearthstone.
