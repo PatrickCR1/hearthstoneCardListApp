@@ -2,7 +2,7 @@
 Repository of Hearthstone CardList Application
 
 This application shows a list of hearthstone cards to the user, showing name, rarity and cost on the first screen. If you click on any card, it navigates to a second
-screen where the user have the imagem and all the informations on that card, incluinding name, flavor, description, rarity, set, type, faction, cost, attack and
+screen where the user have the image and all the informations on that card, incluinding name, flavor, description, rarity, set, type, faction, cost, attack and
 health. The application uses connection to an API to obtain the list of hearthstone cards.
 
 The app have the MVVM architecture and uses Koin to do the dependency injection. The View is composed of a main activity that hosts all the fragments, using navigation
