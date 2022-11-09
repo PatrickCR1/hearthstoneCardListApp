@@ -12,6 +12,8 @@
 
 ### The application has 2 models, one for the API, and one domain model, to be used during the application. The application has support for different device resolutions and orientation.
 
+<img src="https://github.com/PatrickCR1/hearthstoneCardListApp/blob/Main/Image/Hearthstone%20App.gif" width="240" height="450" />
+
 # Tecnology applied:
 ### `Kotlin`
 ### `Android Studio`
