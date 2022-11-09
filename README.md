@@ -32,7 +32,7 @@
 
 ## Dependencies
 
-### You can [access the project dependencies here]().
+### You can [access the project dependencies here](https://github.com/PatrickCR1/hearthstoneCardListApp/blob/Main/Dependencies.txt).
 
 ## 📁 Access the project
 ### You can [acess the source code from the project](https://github.com/PatrickCR1/hearthstoneCardListApp/tree/Main) ou [download it](https://github.com/PatrickCR1/hearthstoneCardListApp/archive/refs/heads/Main.zip).
