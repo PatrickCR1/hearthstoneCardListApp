@@ -34,7 +34,7 @@
 
 ### You can [access the project dependencies here]().
 
-## 📁 Acess the project
+## 📁 Access the project
 ### You can [acess the source code from the project](https://github.com/PatrickCR1/hearthstoneCardListApp/tree/Main) ou [download it](https://github.com/PatrickCR1/hearthstoneCardListApp/archive/refs/heads/Main.zip).
 
 ## 🛠️ Open and Run the project
