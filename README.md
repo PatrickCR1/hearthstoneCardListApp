@@ -35,6 +35,6 @@
 ### You can [access the project dependencies here]().
 
 ## 📁 Acess the project
-### You can [acess the source code from the project](https://github.com/PatrickCR1/MobflixRepository/tree/Main/Mobflix) ou [download it]().
+### You can [acess the source code from the project](https://github.com/PatrickCR1/hearthstoneCardListApp/tree/Main) ou [download it](https://github.com/PatrickCR1/hearthstoneCardListApp/archive/refs/heads/Main.zip).
 
 The idea of the application comes from a job test, and uses the Hearthstone API: https://rapidapi.com/omgvamp/api/hearthstone.
