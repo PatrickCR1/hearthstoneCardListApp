@@ -37,7 +37,7 @@
 ## 📁 Acess the project
 ### You can [acess the source code from the project](https://github.com/PatrickCR1/hearthstoneCardListApp/tree/Main) ou [download it](https://github.com/PatrickCR1/hearthstoneCardListApp/archive/refs/heads/Main.zip).
 
-## 🛠️ Abrir e rodar o projeto
+## 🛠️ Open and Run the project
 
 After downloading the project, you can open it with Android Studio. To do that, on the launcher screen click in:
 
