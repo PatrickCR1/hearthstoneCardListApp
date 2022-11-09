@@ -37,4 +37,16 @@
 ## 📁 Acess the project
 ### You can [acess the source code from the project](https://github.com/PatrickCR1/hearthstoneCardListApp/tree/Main) ou [download it](https://github.com/PatrickCR1/hearthstoneCardListApp/archive/refs/heads/Main.zip).
 
-The idea of the application comes from a job test, and uses the Hearthstone API: https://rapidapi.com/omgvamp/api/hearthstone.
+## 🛠️ Abrir e rodar o projeto
+
+After downloading the project, you can open it with Android Studio. To do that, on the launcher screen click in:
+
+- **Open an Existing Project** (or similar option)
+
+- Search where the project files are and select it (In case of zip download, you will need to extract it before searching).
+- Then, click ok.
+
+The Android Studio should execute some tasks from Gradle to configure the project, wait until it finishs. When it does, you can run the App.
+
+# Autor
+[<img src="https://avatars.githubusercontent.com/u/86331226?v=4" width=115><br><sub>Patrick Contarini Richard</sub>](https://github.com/PatrickCR1) 
