@@ -3,6 +3,15 @@
 # Hearthstone Cardlist
 ###  <p align="start">  This application shows a list of hearthstone cards to the user, showing name, rarity and cost on the first screen. If you click on any card, it navigates to a second screen where the user have the image and all the informations on that card, incluinding name, flavor, description, rarity, set, type, faction, cost, attack and health. The application uses connection to an API to obtain the list of hearthstone cards. </p>
 
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Hearthstone Cardlist**
+| :label: Tecnologias | Kotlin, Android Studio, Object-oriented programming, MVVM Architecture 
+| :rocket: URL         | https://github.com/PatrickCR1/hearthstoneCardListApp
+
+<!-- Inserir imagem com a #vitrinedev ao final do link -->
+![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+
 # :hammer: Project Features
 ### <p align="start"> The app have the MVVM architecture and uses Koin to do the dependency injection. The View is composed of a main activity that hosts all the fragments, using navigation with safe args to pass the data between the fragments. The first fragment of the application shows a list of cards with no filter, using a drawer layout to navigate to the other fragments, each named by a different class, to show the user a list of cards filtered by the chosen class. </p>
 
