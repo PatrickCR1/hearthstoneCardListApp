@@ -5,8 +5,8 @@
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Hearthstone Cardlist**
-| :label: Tecnologias | Kotlin, Android Studio, Object-oriented programming, MVVM Architecture 
+| :sparkles: Name        | **Hearthstone Cardlist**
+| :label: Technologies | Kotlin, Android Studio, Object-oriented programming, MVVM Architecture 
 | :rocket: URL         | https://github.com/PatrickCR1/hearthstoneCardListApp
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
