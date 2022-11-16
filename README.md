@@ -35,7 +35,6 @@
 ### `Jetpack Navigation`: Navigation between fragments.
 ### `Safe Args`: Sharing information between fragments.
 ### `Picasso`: Load images from internet.
-### `Room:`: Data persistence: store data.
 ### `Retrofit:`: Make calls to an API, to get data and information needed to run the application.
 ### `Hearthstone Public API`: To get cards informations.
 ### `Koin`: Dependency Injection
