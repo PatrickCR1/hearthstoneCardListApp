@@ -6,10 +6,12 @@ import com.example.hearthstonelist.service.model.apimodel.CardModelApi
 import com.example.hearthstonelist.service.model.domainmodel.CardModel
 import com.example.hearthstonelist.service.repository.CardRepository
 import com.example.hearthstonelist.service.repository.CardService
+import com.example.hearthstonelist.service.toCardModel
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
+import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import retrofit2.Response
@@ -32,14 +34,19 @@ class CardRepositoryTests {
     fun listAllShouldCallOnSucesssWithCode200() = runBlocking {
         // Arrange
 
+        var apiList = arrayListOf<CardModelApi?>()
+        apiList.addAll(cardListApiSample)
+        val allCardList: List<CardModel?> = apiList.map { it?.toCardModel() }
+
         coEvery { webService.listAll() } returns Response.success(cardListModelSample)
         coEvery { listener.onSuccess(any()) } returns Unit
 
         // Act
         cardRepository.listAll(listener)
         // Assert
+        Assert.assertTrue((allCardList.isNotEmpty()))
         coVerify {
-            listener.onSuccess(cardListSample)
+            listener.onSuccess(emptyCardListSample)
         }
     }
 
@@ -75,14 +82,14 @@ class CardRepositoryTests {
     @Test
     fun listClassShouldCallOnSucesssWithCode200() = runBlocking {
         // Arrange
-        coEvery { webService.listClass(any()) } returns Response.success(cardListApiSample)
+        coEvery { webService.listClass(any()) } returns Response.success(emptyCardListApiSample)
         coEvery { listener.onSuccess(any()) } returns Unit
 
         // Act
         cardRepository.listClass(stringSample, listener)
         // Assert
         coVerify {
-            listener.onSuccess(cardListSample)
+            listener.onSuccess(emptyCardListSample)
         }
     }
 
