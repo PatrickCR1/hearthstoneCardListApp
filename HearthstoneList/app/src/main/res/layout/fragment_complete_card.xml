@@ -5,6 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingStart="@dimen/small_margin"
+    android:paddingEnd="@dimen/small_margin"
+    android:paddingTop="@dimen/small_margin"
+    android:paddingBottom="@dimen/medium_margin"
     tools:context=".ui.view.fragments.CompleteCardFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +19,7 @@
         <ImageView
             android:id="@+id/image_card"
             style="@style/CardItems"
-            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginTop="@dimen/small_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

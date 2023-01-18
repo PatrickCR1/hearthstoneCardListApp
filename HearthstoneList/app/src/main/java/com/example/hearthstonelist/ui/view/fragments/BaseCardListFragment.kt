@@ -22,7 +22,7 @@ abstract class BaseCardListFragment() : Fragment() {
     // ViewModel & Binding
     val viewModel: CardListViewModel by viewModel()
     private var _binding: FragmentBaseBinding? = null
-    private val binding get() = _binding!!
+    val binding get() = _binding!!
 
     // Adapter
     private val adapter: CardsAdapter by inject()

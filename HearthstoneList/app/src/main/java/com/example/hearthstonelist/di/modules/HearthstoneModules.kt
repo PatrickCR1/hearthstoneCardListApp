@@ -22,11 +22,11 @@ val hearthstoneWebClientModules = module {
 }
 
 val hearthstoneRepositoryModules = module {
-    single<CardRepository> { CardRepository(get(), androidContext()) }
+    single<CardRepository> { CardRepository(get()) }
 }
 
 val hearthstoneViewModelModules = module {
-    viewModel<CardListViewModel> { CardListViewModel(get()) }
+    viewModel<CardListViewModel> { CardListViewModel(get(), androidContext()) }
 }
 
 val hearthstoneAdapterModules = module {

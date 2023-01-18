@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.example.hearthstonelist.R
 import com.example.hearthstonelist.databinding.FragmentCompleteCardBinding
+import com.example.hearthstonelist.service.constants.HSConstants
 import com.example.hearthstonelist.service.image.ImageService
 import com.example.hearthstonelist.service.model.domainmodel.CardModel
 
@@ -45,6 +46,6 @@ class CompleteCardFragment : Fragment() {
         binding.textCardHealth.text = getString(R.string.card_health, card.health)
         val image = card.image
 
-        ImageService.loadImage(context, image, binding.imageCard)
+        ImageService.loadImage(context, image, binding.imageCard, HSConstants.IMAGE.IMAGE_WIDTH, HSConstants.IMAGE.IMAGE_HEIGHT)
     }
 }
