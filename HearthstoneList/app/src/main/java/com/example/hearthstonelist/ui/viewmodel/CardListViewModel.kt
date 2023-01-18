@@ -26,6 +26,9 @@ class CardListViewModel(private val repository: CardRepository, private val cont
     private val _clickCard = MutableLiveData<CardModel>()
     val clickCard: LiveData<CardModel> = _clickCard
 
+    private val _toastMessage = MutableLiveData<String>("")
+    val toastMessage: LiveData<String> = _toastMessage
+
     // Listener
     val listener = object : APIListener<List<CardModel?>> {
         override fun onSuccess(result: List<CardModel?>) {
@@ -34,17 +37,9 @@ class CardListViewModel(private val repository: CardRepository, private val cont
 
         override fun onFailure(message: String?) {
             if (message == null) {
-                showToast(context.getString(R.string.ERROR_UNEXPECTED))
+                _toastMessage.value = context.getString(R.string.ERROR_UNEXPECTED)
             }
         }
-    }
-
-    private fun showToast(string: String) {
-        Toast.makeText(
-            context,
-            string,
-            Toast.LENGTH_SHORT
-        ).show()
     }
 
     // Get Lists
@@ -54,7 +49,7 @@ class CardListViewModel(private val repository: CardRepository, private val cont
                     repository.listAll(listener)
                 }
             } else {
-                showToast(context.getString(R.string.ERROR_INTERNET_CONNECTION))
+                _toastMessage.value = context.getString(R.string.ERROR_INTERNET_CONNECTION)
             }
     }
 
@@ -64,12 +59,16 @@ class CardListViewModel(private val repository: CardRepository, private val cont
                 repository.listClass(hsClass, listener)
             }
         } else {
-            showToast(context.getString(R.string.ERROR_INTERNET_CONNECTION))
+            _toastMessage.value = context.getString(R.string.ERROR_INTERNET_CONNECTION)
         }
     }
 
     fun navigate(card: CardModel) {
         _clickCard.value = card
+    }
+
+    fun resetToastValue() {
+        _toastMessage.value = ""
     }
 
     // Check Internet
