@@ -19,6 +19,11 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class DemonHunterCardListFragmentTests {
 
+    /* To do
+        Mock Dependency Injection
+        Mock Api Response
+    */
+
     @Before
     fun setup() {
         ActivityScenario.launch(MainActivity::class.java)
