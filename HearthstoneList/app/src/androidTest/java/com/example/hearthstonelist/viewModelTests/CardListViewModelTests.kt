@@ -1,9 +1,13 @@
-package com.example.hearthstonelist
+package com.example.hearthstonelist.viewModelTests
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
+import com.example.hearthstonelist.cardListSample
+import com.example.hearthstonelist.emptyCardModelSample
+import com.example.hearthstonelist.getOrAwaitValue
 import com.example.hearthstonelist.service.repository.CardRepository
+import com.example.hearthstonelist.stringSample
 import com.example.hearthstonelist.ui.viewmodel.CardListViewModel
 import io.mockk.coEvery
 import io.mockk.coVerify
@@ -87,12 +91,12 @@ class CardListViewModelTests {
     fun navigationShouldChangeLiveDataValue() {
 
         //Act
-        viewModel.navigate(cardModelSample)
+        viewModel.navigate(emptyCardModelSample)
 
         val returnedValue = viewModel.clickCard.getOrAwaitValue()
 
         //Assert
-        Assert.assertEquals(cardModelSample, returnedValue)
+        Assert.assertEquals(emptyCardModelSample, returnedValue)
     }
 
     @Test

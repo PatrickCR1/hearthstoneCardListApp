@@ -6,8 +6,6 @@ import com.example.hearthstonelist.service.model.apimodel.CardListModel
 import com.example.hearthstonelist.service.model.apimodel.CardModelApi
 import com.example.hearthstonelist.service.model.domainmodel.CardModel
 import com.example.hearthstonelist.service.toCardModel
-import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class CardRepository(private val webService: CardService) {

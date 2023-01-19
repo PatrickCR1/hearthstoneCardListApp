@@ -8,10 +8,10 @@ val cardModelApiSample = CardModelApi()
 
 val cardListApiSample = mutableListOf<CardModelApi?>().apply { this.add(cardModelApiSample) }
 
-val cardListModelSample = CardListModel()
-
 val emptyCardListSample = mutableListOf<CardModel?>()
 
 val emptyCardListApiSample = mutableListOf<CardModelApi>()
+
+val cardListModelSample = CardListModel()
 
 val stringSample = ""

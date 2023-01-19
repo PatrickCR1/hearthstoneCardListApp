@@ -56,5 +56,5 @@ data class CardModelApi(
     var locale: String = "",
 
     @SerializedName("playerClass")
-    var playerClass: String = "",
+    var playerClass: String = ""
 )

@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hearthstonelist.MobileNavigationDirections
 import com.example.hearthstonelist.databinding.FragmentBaseBinding
+import com.example.hearthstonelist.service.jokeList
 import com.example.hearthstonelist.service.listener.CardListener
 import com.example.hearthstonelist.service.model.domainmodel.CardModel
 import com.example.hearthstonelist.ui.adapter.CardsAdapter
@@ -51,8 +52,13 @@ abstract class BaseCardListFragment() : Fragment() {
 
         // Observers
         observe()
+        setJoke()
 
         return binding.root
+    }
+
+    private fun setJoke() {
+        binding.textJoke.text = jokeList.random()
     }
 
     override fun onDestroyView() {
@@ -64,6 +70,8 @@ abstract class BaseCardListFragment() : Fragment() {
         viewModel.cards.observe(viewLifecycleOwner) {
             adapter.updateList(it)
             binding.progressCircular.isGone = true
+            binding.textWait.isGone = true
+            binding.textJoke.isGone = true
         }
         viewModel.clickCard.observe(viewLifecycleOwner) {
             if (transition == true) {
